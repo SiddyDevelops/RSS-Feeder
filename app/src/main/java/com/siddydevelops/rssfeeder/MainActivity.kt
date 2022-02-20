@@ -1,15 +1,28 @@
 package com.siddydevelops.rssfeeder
 
 import android.os.AsyncTask
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import java.io.IOException
-import java.lang.Exception
-import java.lang.StringBuilder
-import java.net.HttpURLConnection
-import java.net.MalformedURLException
+import androidx.appcompat.app.AppCompatActivity
 import java.net.URL
+
+class FeedEntry {
+    var name: String = ""
+    var artist: String = ""
+    var releaseDate: String = ""
+    var summary: String = ""
+    var imageURL: String = ""
+
+    override fun toString(): String {
+        return """
+            Name = $name
+            Artist = $artist
+            ReleaseDate = $releaseDate
+            Summary = $summary
+            ImageURL = $imageURL
+        """.trimIndent()
+    }
+}
 
 class MainActivity : AppCompatActivity() {
 
