@@ -17,7 +17,6 @@ class ViewHolder(v:View) {
 class FeedAdapter(context : Context, private val resource: Int, private val applications: List<FeedEntry>)
     : ArrayAdapter<FeedEntry>(context, resource) {
 
-    private val TAG = "FeedAdapter"
     private val inflater = LayoutInflater.from(context)
 
     override fun getCount(): Int {

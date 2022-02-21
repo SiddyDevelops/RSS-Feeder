@@ -38,9 +38,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.d(TAG,"OnCreate called")
+        //Log.d(TAG,"OnCreate called")
         downloadData.execute("http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topfreeapplications/limit=25/xml")
-        Log.d("TAG","onCreate: Done")
+        //Log.d("TAG","onCreate: Done")
 
     }
 
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun doInBackground(vararg url: String?): String {
-                Log.d(TAG,"doInBackground: starts with ${url[0]}")
+                //Log.d(TAG,"doInBackground: starts with ${url[0]}")
                 val rssFeed = downloadXML(url[0])
                 if(rssFeed.isEmpty())
                 {
